@@ -43,7 +43,7 @@ section ul li {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    /* Fix this as parallax or flipcard ddon't need to be on mobile???  */
+    /* Fix this as parallax or flipcard don't need to be on mobile???  */
     position: absolute;
     top: 0px;
     right: 0px;
@@ -188,23 +188,6 @@ a:visited {
     }
 }
 
-/* .flip-card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-
-  .flip_card_front, .flip_card_back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; 
-    backface-visibility: hidden;
-  } */
-
 .introduction p {
     color: #3d2b1f;
     font-weight: 700;
@@ -212,13 +195,8 @@ a:visited {
 }
 
 #toc_container {
-    background-color: #8f9779;
-    background-color: #c4aead; 
-    background-color: #9f8170;
-    background-color: #a0785a; 
-    background-color: #987654;
+    /* background-color: #987654; */
     background-color: #836953; 
-    /* Fix!!! */
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -329,9 +307,7 @@ a:visited {
     width: fit-content;
     border-radius: 50px; 
     padding: 15px 15px 0 15px;
-    background-color: #9f8170;
     background-color: #987654;
-    /* Fix nav!!! */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 20px;
     border: 1px solid #4b3621;
@@ -352,33 +328,28 @@ a:visited {
 
 .photo_gallery_container {
     display: grid;
-    grid-row-gap: 15px;
     justify-items: center;
     align-items: baseline;
-    background-color: #8f9779;
     border-width: 3px;
     border-style: groove none groove none;
     border-color: #856d4d;
+    background-color: #987654;
 }
 
-.photo:nth-child(odd){
-    margin: 0 15px 0 35px;
-}
-
-.photo:nth-child(even){
-    margin: 0 35px 0 15px;
+.photo {
+    margin: 7px 15px 7px 15px;
 }
 
 .photo:first-child, .photo:nth-child(2) {
     margin-top: 25px;
 }
 
-.photo:last-child, .photo:nth-child(11){
+.photo:last-child {
     margin-bottom: 25px;
-}
+} 
 
 .photo p{
-    background-color: #cc6666;
+    background-color: #bdb76b;
     border-radius: 10px;
     font-size: 15px;
     font-family: "Rockwell";
@@ -417,18 +388,19 @@ a:visited {
 }
 
 .planning h2, .sightseeing h2, .packing h2, .safety h2 {
-    background-color: #cc6666;
     text-align: center;
     border-radius: 10px 10px 0 0;
     border: 1px solid #4b3621;
+    background-color: #bdb76b;
 }
 
 .sightseeing ul, .packing ul, .safety ul, .planning ul {
-    background-color: #c4aead;
     border-radius: 0 0 10px 10px;
-    padding: 10px;
-    list-style: none;
+    padding: 20px;
+    padding-left: 35px;
+    list-style: disc;
     border: 1px solid #4b3621;
+    background-color: #ad6f69ad;
 }
 
 .safety {
@@ -454,6 +426,10 @@ a:visited {
 .contact_form label, .contact_form button {
     font-family: "Nunito";
     font-size: 20px;
+}
+
+.contact_form button {
+    background-color: white;
 }
 
 .form {
@@ -562,7 +538,7 @@ a.skip:focus{
         grid-gap: 15px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(6, auto);
-        align-content: stretch;
+        /* align-content: stretch; */
     }
 
     .travel_tips_container {
@@ -572,8 +548,42 @@ a.skip:focus{
     }
 }
 
+@media screen and (min-width: 1030px) {
+    .photo_gallery_container {
+        align-items: center;
+        grid-gap: 15px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .introduction img {
+        width: 85%;
+        max-height: 100%;
+        grid-row: 1 / span 3;
+        grid-column: 1 / span 1;
+        animation-name: pic_fade;
+        animation-duration: 2s;
+        animation-iteration-count: 1; 
+
+    }
+
+    @keyframes pic_fade {
+        from{
+            width: 0px;
+            opacity: 0;
+        }
+        to{
+            width: 85%;
+            opacity: 1;
+        }
+    }
+}
+
 @media (prefers-reduced-motion){
     .introduction img {
         animation-name: none;
+    }
+    .about_me_container h1::before{
+        background-attachment: scroll;
     }
 }
