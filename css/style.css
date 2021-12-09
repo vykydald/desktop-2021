@@ -1,0 +1,579 @@
+* {
+    font-family: "Century Gothic", serif;
+}
+
+body {
+    background-color: #f5deb3;
+}
+
+p {
+    font-size: 20px;
+    padding: 15px 15px;
+    font-family: "Catamaran";
+}
+
+h1 {
+    color: #3d2b1f;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 40px;
+    text-align: center;
+    font-family: "Nunito";
+    font-weight: 600;
+}
+
+section ul li {
+    font-size: 20px;
+    font-family: "Catamaran";
+}
+
+.about_me_container h1 {
+    height: 300px;
+    font-size: 65px;
+    font-weight: 900;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_me_container h1::before {
+    content: "";
+    background-image: url(../images/positano.JPG);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Fix this as parallax or flipcard ddon't need to be on mobile???  */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.65;
+    z-index: -1;
+}
+
+h2 {
+    color: #4b3621;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+h3 {
+    color: #4b3621;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+footer{
+    background-color: #bdb76b;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+#skip {
+    border: 5px ridge #856d4d;
+}
+
+nav {
+    background-color: #bdb76b;
+    text-align: center;  
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav li {
+    background-color: #d2b48c;
+    border: 5px solid #ad6f69;
+    border-radius: 25px;
+    width: 100%;
+}
+
+nav li a {
+    margin: 2px 2px;
+    display: inline-block;
+    padding: 3px 0; 
+}
+
+nav li:last-child{
+    border-top: 0;
+}
+
+nav li:nth-child(2){
+    border-top: 0;
+}
+
+nav li:nth-child(3){
+    border-top: 0;
+}
+
+nav li:nth-child(4){
+    border-top: 0;
+}
+
+nav .current {
+    background-color: #808000;
+}
+
+nav .current a {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* nav .current a::after{
+    content: "\21DA";
+}
+
+nav .current a::before {
+    content: "\21DB";
+} */
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+nav a {
+    color: black;
+    width: 100%;
+    text-decoration: none;
+}
+
+a:visited { 
+    color: black;
+}
+
+.introduction{
+    display: grid;
+    justify-items: center;
+    padding: 25px 0 0 0;
+    background-color: #ad6f69;
+    border-width: 5px;
+    border-style: ridge none none none;
+    border-color: #856d4d;
+}
+
+.introduction img{
+    width: 75%;
+    border-radius: 50%;
+    padding: 25px 5px;
+    background-color: #4b3621;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px;
+    animation-name: pic_fade;
+    animation-duration: 2s;
+    animation-iteration-count: 1; 
+}
+
+@keyframes pic_fade {
+    from{
+        width: 0px;
+        opacity: 0;
+    }
+    to{
+        width: 75%;
+        opacity: 1;
+    }
+}
+
+/* .flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip_card_front, .flip_card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  } */
+
+.introduction p {
+    color: #3d2b1f;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+#toc_container {
+    background-color: #8f9779;
+    background-color: #c4aead; 
+    background-color: #9f8170;
+    background-color: #a0785a; 
+    background-color: #987654;
+    background-color: #836953; 
+    /* Fix!!! */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-width: 5px;
+    border-style: none ridge;
+    border-color: #856d4d;
+    border-top: 3px groove #856d4d; 
+}
+
+.toc_title {
+    font-size: 25px;
+    padding-bottom: 10px;
+    color: black;
+    font-family: "Nunito";
+}
+
+.toc_list {
+    padding-bottom: 10px;
+}
+
+.toc_list li a {
+    color: black;
+    font-family: "Nunito";
+    font-size: 20px;
+    padding: 2px;
+}
+
+.toc_list li a:visited {
+    color: black; 
+}
+
+.toc_list li li a {
+    font-size: 16px;
+}
+
+.toc_list li li:first-child {
+    padding: 10px 0 0 0;
+}
+
+.toc_list li:first-child {
+    padding-bottom: 8px;
+}
+
+#destinations_container {
+    border-width: 5px;
+    border-style: none ridge ridge ridge;
+    border-color: #856d4d;
+}
+
+#destinations {
+    display: flex;
+    flex-direction: column;
+}
+
+#destinations_title {
+    background-color: #ad6f69;  
+    border-width: 5px;
+    border-style: ridge ridge none ridge;
+    border-color: #856d4d;
+    width: 100%;
+}
+
+#north_america, #europe {
+    border-width: 3px;
+    border-style: groove none none none;
+    border-color: #856d4d;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#destinations_container h2 {
+    background-color: #bdb76b;
+    text-align: center;
+    width: 100%;
+}
+
+#destinations_container h3 {
+    padding: 15px;
+    background-color: #ad6f69ad;
+    border-width: 2px;
+    border-style: groove none groove none;
+    border-color: #856d4d;
+    width: 100%;
+}
+
+#canada, #italy, #france_and_england {
+    margin-top: 20px;
+}
+
+#destinations_container img {
+    max-height: 350px;
+    border-radius: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    border: 2px solid #4b3621;
+}
+
+#destinations_container p {
+    margin: 10px;
+    color: #1a2421;
+}
+
+.destinations_photo_container {
+    width: fit-content;
+    border-radius: 50px; 
+    padding: 15px 15px 0 15px;
+    background-color: #9f8170;
+    background-color: #987654;
+    /* Fix nav!!! */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px;
+    border: 1px solid #4b3621;
+}
+
+.photo_text_container {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.photo_text_container p {
+    font-family: "Rockwell";
+}
+
+.photo_gallery {
+    background-color: #ad6f69; 
+}
+
+.photo_gallery_container {
+    display: grid;
+    grid-row-gap: 15px;
+    justify-items: center;
+    align-items: baseline;
+    background-color: #8f9779;
+    border-width: 3px;
+    border-style: groove none groove none;
+    border-color: #856d4d;
+}
+
+.photo:nth-child(odd){
+    margin: 0 15px 0 35px;
+}
+
+.photo:nth-child(even){
+    margin: 0 35px 0 15px;
+}
+
+.photo:first-child, .photo:nth-child(2) {
+    margin-top: 25px;
+}
+
+.photo:last-child, .photo:nth-child(11){
+    margin-bottom: 25px;
+}
+
+.photo p{
+    background-color: #cc6666;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: "Rockwell";
+    border: 1px solid #4b3621;
+}
+
+.photo img{
+    border-radius: 40px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border: 1px solid #4b3621;
+}
+
+.tips h1 {
+    border-width: 3px;
+    border-style: none none groove none;
+    border-color: #856d4d;
+    background-color: #ad6f69; 
+    margin-bottom: 15px;
+}
+
+.travel_tips_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 7px 10px 7px;
+    margin: 15px;
+}
+
+.planning, .sightseeing, .packing, .safety{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    max-width: 350px;
+}
+
+.planning h2, .sightseeing h2, .packing h2, .safety h2 {
+    background-color: #cc6666;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #4b3621;
+}
+
+.sightseeing ul, .packing ul, .safety ul, .planning ul {
+    background-color: #c4aead;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+    list-style: none;
+    border: 1px solid #4b3621;
+}
+
+.safety {
+    padding-bottom: 15px;
+}
+
+.contact_form h1 {
+    background-color: #ad6f69; 
+    border-width: 3px;
+    border-style: none none groove none;
+    border-color: #856d4d;
+}
+
+.contact_form form {
+    border: 4px solid #4b3621;
+    background-color: #987654;
+}
+
+.contact_form p {
+    text-align: center;
+}
+
+.contact_form label, .contact_form button {
+    font-family: "Nunito";
+    font-size: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    background-color: #ad6f69ad;
+}
+
+.form:nth-child(2) {
+    padding-bottom: 35px;
+}
+
+.name, .email, .message, .submission {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+}
+
+a.skip{
+    left: 0;
+    position: absolute;
+    top: -40px;
+    z-index: 1;
+    background-color: white;
+  }
+  
+a.skip:focus{
+    top: 5px;
+    color: black;
+    text-decoration-style: solid;
+}
+
+@media screen and (min-width: 750px) {
+    nav ul {
+        flex-direction: row;
+        padding: 13px;
+    }
+
+    nav li a {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    nav li:nth-child(2), nav li:nth-child(3), nav li:nth-child(4), nav li:last-child{
+        border: 5px solid #ad6f69;
+    }
+
+    nav li {
+        display: flex;
+        align-items: center;
+    }
+
+    .introduction {
+        grid-auto-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-items: center;
+        padding: 20px;
+        grid-column-gap: 15px;
+    }
+
+    .introduction img {
+        width: 100%;
+        max-height: 100%;
+        grid-row: 1 / span 3;
+        grid-column: 1 / span 1;
+        animation-name: pic_fade;
+        animation-duration: 2s;
+        animation-iteration-count: 1; 
+
+    }
+
+    @keyframes pic_fade {
+        from{
+            width: 0px;
+            opacity: 0;
+        }
+        to{
+            width: 100%;
+            opacity: 1;
+        }
+    }
+
+    .introduction p:first-child {
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;
+    }
+
+    .introduction p:nth-child(3) {
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 1;
+    }
+
+    .introduction p:last-child  {
+        grid-row: 3 / span 1;
+        grid-column: 2 / span 1;
+    }
+
+    .photo_gallery_container {
+        grid-gap: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, auto);
+        align-content: stretch;
+    }
+
+    .travel_tips_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (prefers-reduced-motion){
+    .introduction img {
+        animation-name: none;
+    }
+}
