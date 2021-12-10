@@ -186,8 +186,7 @@ a:visited {
 }
 
 #toc_container {
-    /* background-color: #987654; */
-    background-color: #836953; 
+    background-color: #987654;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -291,7 +290,7 @@ a:visited {
 
 #destinations_container p {
     margin: 10px;
-    color: #1a2421;
+    color: #080808;
 }
 
 .destinations_photo_container {
