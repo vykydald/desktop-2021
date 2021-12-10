@@ -43,7 +43,6 @@ section ul li {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    /* Fix this as parallax or flipcard don't need to be on mobile???  */
     position: absolute;
     top: 0px;
     right: 0px;
@@ -131,14 +130,6 @@ nav .current a {
     text-decoration: underline;
     font-weight: 600;
 }
-
-/* nav .current a::after{
-    content: "\21DA";
-}
-
-nav .current a::before {
-    content: "\21DB";
-} */
 
 nav ul {
     list-style-type: none;
@@ -534,7 +525,6 @@ a.skip:focus{
         grid-gap: 15px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(6, auto);
-        /* align-content: stretch; */
     }
 
     .travel_tips_container {
